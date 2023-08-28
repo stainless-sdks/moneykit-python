@@ -4,7 +4,7 @@ from typing import List
 
 from .account import Account
 from ..._models import BaseModel
-from .link_common import LinkCommon
+from ..link_common import LinkCommon
 
 __all__ = ["AccountListResponse"]
 

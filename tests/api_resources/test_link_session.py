@@ -41,12 +41,12 @@ class TestLinkSession:
                 "id": "xxxx",
                 "email": {
                     "address": "xxxx",
-                    "customer_verified_at": parse_datetime("2023-02-16T00:00:00"),
+                    "customer_verified_at": parse_datetime("2019-12-27T18:11:19.117Z"),
                 },
                 "phone": {
                     "number": "+16175551212",
                     "country": "US",
-                    "customer_verified_at": parse_datetime("2023-02-16T00:00:00"),
+                    "customer_verified_at": parse_datetime("2019-12-27T18:11:19.117Z"),
                 },
             },
             redirect_uri="https://yourdomain.com/oauth.html",
@@ -126,12 +126,12 @@ class TestAsyncLinkSession:
                 "id": "xxxx",
                 "email": {
                     "address": "xxxx",
-                    "customer_verified_at": parse_datetime("2023-02-16T00:00:00"),
+                    "customer_verified_at": parse_datetime("2019-12-27T18:11:19.117Z"),
                 },
                 "phone": {
                     "number": "+16175551212",
                     "country": "US",
-                    "customer_verified_at": parse_datetime("2023-02-16T00:00:00"),
+                    "customer_verified_at": parse_datetime("2019-12-27T18:11:19.117Z"),
                 },
             },
             redirect_uri="https://yourdomain.com/oauth.html",

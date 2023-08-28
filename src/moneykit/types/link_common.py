@@ -126,7 +126,9 @@ class LinkCommon(BaseModel):
     state: Literal["connecting", "awaiting_token_exchange", "connected", "deleted", "error"]
     """An enumeration."""
 
-    error_code: Optional[object] = None
+    error_code: Optional[
+        Literal["system_error", "provider_error", "institution_error", "user_error", "auth_expired", "incomplete"]
+    ] = None
     """An enumeration."""
 
     last_synced_at: Optional[datetime] = None

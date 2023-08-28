@@ -1,7 +1,7 @@
 # File generated from our OpenAPI spec by Stainless.
 
 from ..._models import BaseModel
-from .link_common import LinkCommon
+from ..link_common import LinkCommon
 
 __all__ = ["ExchangeTokenResponse"]
 
