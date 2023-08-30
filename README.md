@@ -25,11 +25,11 @@ client = Moneykit(
     # defaults to os.environ.get("MONEYKIT_API_KEY")
     api_key="my api key",
     # defaults to "production".
-    environment="environment_1",
+    environment="sandbox",
 )
 
 link = client.links.retrieve(
-    "REPLACE_ME",
+    "id",
 )
 ```
 
@@ -47,13 +47,13 @@ client = AsyncMoneykit(
     # defaults to os.environ.get("MONEYKIT_API_KEY")
     api_key="my api key",
     # defaults to "production".
-    environment="environment_1",
+    environment="sandbox",
 )
 
 
 async def main():
     link = await client.links.retrieve(
-        "REPLACE_ME",
+        "id",
     )
     print(link)
 

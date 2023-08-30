@@ -45,7 +45,7 @@ __all__ = [
 
 ENVIRONMENTS: Dict[str, str] = {
     "production": "https://production.moneykit.com",
-    "environment_1": "https://sandbox.moneykit.com",
+    "sandbox": "https://sandbox.moneykit.com",
 }
 
 
@@ -60,12 +60,12 @@ class Moneykit(SyncAPIClient):
     # client options
     api_key: str
 
-    _environment: Literal["production", "environment_1"]
+    _environment: Literal["production", "sandbox"]
 
     def __init__(
         self,
         *,
-        environment: Literal["production", "environment_1"] = "production",
+        environment: Literal["production", "sandbox"] = "production",
         base_url: Optional[str] = None,
         api_key: Optional[str] = None,
         timeout: Union[float, Timeout, None] = DEFAULT_TIMEOUT,
@@ -140,7 +140,7 @@ class Moneykit(SyncAPIClient):
         self,
         *,
         api_key: str | None = None,
-        environment: Literal["production", "environment_1"] | None = None,
+        environment: Literal["production", "sandbox"] | None = None,
         base_url: str | None = None,
         timeout: float | Timeout | None | NotGiven = NOT_GIVEN,
         connection_pool_limits: httpx.Limits | NotGiven = NOT_GIVEN,
@@ -207,12 +207,12 @@ class AsyncMoneykit(AsyncAPIClient):
     # client options
     api_key: str
 
-    _environment: Literal["production", "environment_1"]
+    _environment: Literal["production", "sandbox"]
 
     def __init__(
         self,
         *,
-        environment: Literal["production", "environment_1"] = "production",
+        environment: Literal["production", "sandbox"] = "production",
         base_url: Optional[str] = None,
         api_key: Optional[str] = None,
         timeout: Union[float, Timeout, None] = DEFAULT_TIMEOUT,
@@ -287,7 +287,7 @@ class AsyncMoneykit(AsyncAPIClient):
         self,
         *,
         api_key: str | None = None,
-        environment: Literal["production", "environment_1"] | None = None,
+        environment: Literal["production", "sandbox"] | None = None,
         base_url: str | None = None,
         timeout: float | Timeout | None | NotGiven = NOT_GIVEN,
         connection_pool_limits: httpx.Limits | NotGiven = NOT_GIVEN,
