@@ -1,3 +1,9 @@
+# Shared Types
+
+```python
+from moneykit.types import SupportedVersion
+```
+
 # Links
 
 Types:
@@ -78,10 +84,6 @@ Types:
 from moneykit.types.auth import GenerateAccessTokenResponse
 ```
 
-Methods:
-
-- <code title="post /auth/token">client.auth.token.<a href="./src/moneykit/resources/auth/token.py">create</a>(\*\*<a href="src/moneykit/types/auth/token_create_params.py">params</a>) -> <a href="./src/moneykit/types/auth/generate_access_token_response.py">GenerateAccessTokenResponse</a></code>
-
 ## Introspect
 
 Types:
@@ -156,18 +158,6 @@ from moneykit.types.users import GetUserAccountsResponse
 Methods:
 
 - <code title="get /users/{id}/accounts">client.users.accounts.<a href="./src/moneykit/resources/users/accounts.py">list</a>(id, \*\*<a href="src/moneykit/types/users/account_list_params.py">params</a>) -> <a href="./src/moneykit/types/users/get_user_accounts_response.py">GetUserAccountsResponse</a></code>
-
-## Links
-
-Types:
-
-```python
-from moneykit.types.users import GetUserLinksResponse
-```
-
-Methods:
-
-- <code title="get /users/{id}/links">client.users.links.<a href="./src/moneykit/resources/users/links.py">list</a>(id) -> <a href="./src/moneykit/types/users/get_user_links_response.py">GetUserLinksResponse</a></code>
 
 # WellKnown
 

@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+from .shared import SupportedVersion as SupportedVersion
 from .institution import Institution as Institution
 from .link_common import LinkCommon as LinkCommon
 from .link_response import LinkResponse as LinkResponse

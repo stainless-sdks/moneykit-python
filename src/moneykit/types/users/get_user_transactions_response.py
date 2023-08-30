@@ -1,6 +1,5 @@
 # File generated from our OpenAPI spec by Stainless.
 
-import datetime
 from typing import Dict, List, Optional
 from datetime import datetime
 from typing_extensions import Literal
@@ -41,12 +40,6 @@ class Transaction(BaseModel):
     currency: str
     """The ISO-4217 currency code of the transaction."""
 
-    date: datetime.date
-    """The effective (posted) date of the transaction, in ISO-8601 format.
-
-    For pending transactions, this date is when the transaction was initiated.
-    """
-
     pending: bool
     """
     If true, this transaction is pending or unsettled and has not yet affected the
@@ -66,14 +59,6 @@ class Transaction(BaseModel):
     The category for this transaction, given as a dotted string indicating a
     hierarchical categorization. See <a href=/pages/categories>Transaction
     Categories</a> for the list of possible transaction types.
-    """
-
-    datetime: Optional[_datetime.datetime] = None
-    """
-    If the institution has provided the actual time of the transaction, this field
-    contains the full date and time of the transaction, in ISO-8601 format. If the
-    time is not available, this field will be null. <p>Note that the time is
-    generally reported in the timezone of the institution or the account holder.
     """
 
     description: Optional[str] = None

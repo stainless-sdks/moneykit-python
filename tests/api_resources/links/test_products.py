@@ -17,6 +17,7 @@ class TestProducts:
     loose_client = Moneykit(base_url=base_url, api_key=api_key, _strict_response_validation=False)
     parametrize = pytest.mark.parametrize("client", [strict_client, loose_client], ids=["strict", "loose"])
 
+    @pytest.mark.skip(reason="prism doesn't allow an array with duplicate enums")
     @parametrize
     def test_method_create(self, client: Moneykit) -> None:
         product = client.links.products.create(
@@ -31,6 +32,7 @@ class TestAsyncProducts:
     loose_client = AsyncMoneykit(base_url=base_url, api_key=api_key, _strict_response_validation=False)
     parametrize = pytest.mark.parametrize("client", [strict_client, loose_client], ids=["strict", "loose"])
 
+    @pytest.mark.skip(reason="prism doesn't allow an array with duplicate enums")
     @parametrize
     async def test_method_create(self, client: AsyncMoneykit) -> None:
         product = await client.links.products.create(
